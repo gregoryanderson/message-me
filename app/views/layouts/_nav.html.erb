@@ -10,7 +10,7 @@
         <%= link_to "Logout", logout_path, method: :delete, class: "item" %>  
       <% else %>
         <%= link_to "Login", login_path, class: "item" %>
-        <a class="item">Sign Up</a>
+        <%= link_to "Sign Up", signup_path, class: "item" %>
       <% end %>
     </div>
   </div>
