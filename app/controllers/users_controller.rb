@@ -36,7 +36,8 @@ class UsersController < ApplicationController
   end
 
   def show 
-    @user_articles = @user.articles.paginate(page:params[:page], per_page:5 ) 
+    flash[:success]= "You have successfully signed in!"
+    redirect_to root_path
   end
 
   def destroy
