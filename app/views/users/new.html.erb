@@ -2,29 +2,24 @@
 
 <%= form_for(@user, :html => {class: "form-horizontal", role: "ui form"}) do |f| %>
 
-<%# <form class="ui form"> %>
-  <div class="field">
+  <div class="field sign-up">
     <%= f.label :username, "Username" %>
-    <div class="ui left icon input">
-      <%= f.text_field :username, placeholder: "Username"%>
-      <i class="user icon"></i>
-    </div>
+    <section>
+      <div class="ui left icon input">
+        <%= f.text_field :username, placeholder: "Username"%>
+        <i class="user icon"></i>
+      </div>
+    </section>
   </div>
-  <div class="field">
-  <%# <div class="field"> %>
-    <%# <label>First Name</label> %>
-    <%# <input type="text" name="first-name" placeholder="First Name"> %>
-    <%# <%= f.label :email %> 
-    <%# <%= f.email_field :email, placeholder: "Enter email" %> 
-  <%# </div> %>
-  <div class="field">
+  <div class="field sign-up">
     <%= f.label :password, "Password" %>
-    <div class="ui left icon input">
-      <%= f.text_field :password, placeholder: "Password"%>
-      <i class="user icon"></i>
-    </div>
+    <section>
+      <div class="ui left icon input">
+        <%= f.password_field :password, placeholder: "Password"%>
+        <i class="user icon"></i>
+      </div>
+    </section>
   </div>
   <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: 'button teal ui submit') %>
-  <%# <button class="ui button" type="submit">Submit</button> %>
-<%# </form> %>
+
 <% end %>
